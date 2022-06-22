@@ -1,0 +1,38 @@
+<!---->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+	<title>Problema Directiva IF ELSE</title>
+</head>
+<body>
+
+	<div id="aplicacion">
+		<p>Ingrese el Password:
+		<input type="password" v-model="pass1"></p>
+		<p>Vuelva a ingresar el Password:
+		<input type="password" v-model="pass2"></p>
+		
+		<div v-show="pass1 != '' && pass2 != ''">
+			<p v-if="pass1 == pass2">Los passwords Ingresados son IGUALES</p>
+			<p v-else>Los passwords Ingresados son DIFERENTES</p>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+	<script type="text/javascript">
+		
+		let app = new Vue({
+			el: '#aplicacion',
+			data: {
+				pass1 : '',
+				pass2 : '',
+			}
+		});
+
+	</script>
+
+</body>
+</html>
